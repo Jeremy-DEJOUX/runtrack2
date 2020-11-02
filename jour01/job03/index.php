@@ -30,7 +30,7 @@
           <td>Valeur</td>
         </thead>
 
-        <tr>
+        <tbody>
           <td>Booléen</td>
           <td>bool</td>
           <td> <?php echo $bool; ?> </td>
@@ -48,7 +48,7 @@
           <td><?php echo $txt; ?></td>
         </tr>
 
-        <tr>
+        <tbody>
           <td>nombre à virgule flottante</td>
           <td>virgul</td>
           <td><?php echo $virgul ?></td>
