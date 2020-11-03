@@ -11,7 +11,6 @@
     $entier = 24;
     $txt = "Hello Wolrd";
     $virgul = 24.5;
-
    ?>
 
 
