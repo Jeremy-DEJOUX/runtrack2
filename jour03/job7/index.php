@@ -10,8 +10,15 @@
   return $count;
   }
   $str = "bonjour";
-  for ($i=0; $i < mystrlen($str) ; $i++) {
+  $compte = mystrlen($str);
+  // $i = 0;
+  // while ($i < $compte) {
+  //   echo $str[$i-1];
+  //   i++;
+  // }
 
+  for ($i=0; $i < $compte ; $i++) {
+    echo $str[$i-1];
   }
 
 
