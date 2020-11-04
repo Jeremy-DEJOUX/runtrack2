@@ -9,6 +9,10 @@ else break;
 }
 return $count;
 }
+function mystrlen($str){
+  $count = 0;
+  
+}
   $str = "Dans l'espace, personne ne vous entend crier";
   $compte = mystrlen($str);
   for ($i=0; $i < $compte ; $i++) {
