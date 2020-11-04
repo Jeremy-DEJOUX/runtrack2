@@ -1,6 +1,7 @@
 <?php
-  $str = "Tous ces instants seront perdus dans le temps comme les larmes sous la pluie.";
-  for ($i=0; $i < strlen($str) ; $i = $i+2) {
+  $str = "tous ces instants seront perdus dans le temps comme les larmes sous la pluie.";
+  $strlen = count(str_split($str));
+  for ($i=0; $i < $strlen; $i = $i+2) {
     echo $str[$i];
   }
  ?>
