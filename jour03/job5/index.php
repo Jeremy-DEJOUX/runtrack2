@@ -1,27 +1,36 @@
 <?php
-  $voyelles = 0;
-  $consonnes = 0;
-  $str = "bonjour";
-  $taille = strlen($str);
-  // $dic = [["b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","z"],["a", "e", "i", "o", "u", "y"]];
-  $cons = array("b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","z");
-  $voy = array ("a", "e", "i", "o", "u", "y");
-  $dic = array_combine ($cons, $voy);
-  $comptec = count($dic);
-  // $comptev = count($voy);
-  for ($i=0; $i < $taille ; $i++) {
-      for ($v=0; $v < $comptec ; $v++) {
-        if ($str[$i] == $dic[0][$v]) {
-        $consonnes++;
-        echo $consonnes. "-". $str[$i]."<br />";
-      }
-      elseif ($str[$i] == $dic[1][$v]) {
-        $voyelles++;
-        echo $voyelles. "-". $str[$i]."<br />";
-      }
+function mystrlen($str)
+{
+$count = 0;
+for($i=0; $i<1000000; $i++)
+{
+if(@$str[$i] != "")$count++;
+else break;
+}
+return $count;
+}
+$str = "On n est pas le meilleur quand on le croit mais quand on le sait";
+$compte = mystrlen($str);
+$voyelles = 0;
+$consonnes = 0;
+
+$dic = [["b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","z"],
+        ["a", "e", "i", "o", "u", "y"]];
+
+for ($n=0; $n < $compte ; $n++) {
+  for ($v=0; $v < count($dic[1]); $v++) {
+    if ($str[$n] == $dic[1][$v]) {
+      $voyelles++;
     }
   }
-  echo "C ".$consonnes . "<br />". "V ". $voyelles;
+  for ($c=0; $c < count($dic[0]) ; $c++) {
+    if ($str[$n] == $dic[0][$c]) {
+      $consonnes++;
+    }
+  }
+}
+  echo "Consonnes : ". $consonnes. "<br />"
+        ."Voyelles :". $voyelles;
  ?>
 
  <!-- Matrix -->
