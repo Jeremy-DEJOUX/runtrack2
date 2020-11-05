@@ -6,3 +6,4 @@
     echo "Votre pire cauchemar";
   }
  ?>
+<!-- franchement le dernier Rambo nul nul nul nul nul -->
