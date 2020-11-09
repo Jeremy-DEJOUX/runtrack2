@@ -3,17 +3,17 @@
         if (isset($_POST['reset'])) { // si le bouton a pour valeur reset alors on termine la session.
             unset($_SESSION['nbvisites']);
         }
-        if (!isset($_SESSION['nbvisites'])) { // on vérifie que la variable existe et qu'elle continue d'exister ici on exprime le nombre de visites.
-            $_SESSION['nbvisites'] = 1;
+        if (isset($_SESSION['nbvisites'])) { // on vérifie que la variable existe et qu'elle continue d'exister ici on exprime le nombre de visites.
+            $_SESSION['nbvisites']++;
         }
         else {
-            $_SESSION['nbvisites']++;
+            $_SESSION['nbvisites']=1;
         }
 
         echo "La page est visitée"."".$_SESSION['nbvisites'].""."fois";
 
 
-        ?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
