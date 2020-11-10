@@ -15,7 +15,6 @@ if (isset($_POST) && isset($_POST['prenom'])) { //tant que POST et prénom de PO
 }
 
 
-
 // if ()
 ?>
 
