@@ -1,28 +1,30 @@
 <?php
+  $txt = "Bonjour je suis Jean J'habite au Rue michelle Augustin.";
+  
+  
 
-
-
-  function gras($str){
-      $Maj = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S",
-      "T", "U", "V", "W", "X", "Y", "Z"];
-      for ($i=0; isset($str[$i]); $i++) {
-        foreach ($Maj as $key) {
-            if ($str[$i] == $key) {
-              echo "<b>";
-              while ($str[$i] != " "){
-                echo $str[$i];
-                $str[$i] = $str[$i+1];
-
-              }
-
-              echo "</b>";
+  function gras($txt){
+    $Maj = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    $ponc = [' ', '.', ',', ';', '\''];
+    for ($i=0; isset($txt[$i]); $i++) { 
+      for ($m=0; isset($Maj[$m]); $m++) { 
+        if ($txt[$i] == $Maj[$m]){
+          echo "<b>";
+          while (!in_array($txt[$i],$ponc)){
+            echo $txt[$i];
+            $i++;
           }
-          else {
-            echo $str[$i];
-          }
+          echo "</b>";
         }
-      }
     }
+    echo $txt[$i];
+  }
+  }
 
-gras("La femme De Axel");
- ?>
+  function cesar($txt){
+
+  }
+
+echo gras($txt);
+
+?>
