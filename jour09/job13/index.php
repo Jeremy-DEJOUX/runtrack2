@@ -1,7 +1,7 @@
 <?php
 
 $base_de_donnes = mysqli_connect('localhost', 'root', '', 'jour08');
-$querry = mysqli_query($base_de_donnes, "SELECT salles.nom , etage.nom FROM salles INNER JOIN etage ON salles.id_etage = etage.id");
+$querry = mysqli_query($base_de_donnes, 'SELECT salles.nom , etage.nom FROM salles INNER JOIN etage ON salles.id_etage = etage.id');
 $id = mysqli_fetch_all($querry);
 // var_dump($id)
 
