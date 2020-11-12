@@ -1,1 +1,1 @@
-SELECT * FROM `salles` ORDER BY `capacite`
+SELECT AVG (`capacite`) FROM `salles`
