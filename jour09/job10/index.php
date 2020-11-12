@@ -1,7 +1,7 @@
 <?php
 
 $base_de_donnes = mysqli_connect('localhost', 'root', '', 'jour08');
-$querry = mysqli_query($base_de_donnes, "SELECT * FROM `salles` ORDER BY `capacite` DESC");
+$querry = mysqli_query($base_de_donnes, "SELECT * FROM `salles` ORDER BY `capacite` ASC");
 $id = mysqli_fetch_all($querry);
 // var_dump($id)
 
