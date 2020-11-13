@@ -1,5 +1,5 @@
 <?php
-  $txt = "Bonjour je suis Jean J'habite au Rue michelle Augustin.";
+  $txt = "Bonjour je suis Jean J'habite femme au Rue michelle Augustin femme.";
   
   
 
@@ -21,10 +21,43 @@
   }
   }
 
-  function cesar($txt){
 
+function strlen_copycat($input_string) {
+      $i = 0;
+      while (isset($input_string[$i])) {
+          ++$i;
+      }
+      return $i;
   }
+  // $matrix = "Certaines choses changent, et d'autres ne changeront jamais.";
+  // $length = strlen_copycat($matrix);
 
-echo gras($txt);
+  // // Remercions la magie du modulo
+  // for ($i = 0; $i < $length; ++$i)
+  //     echo $matrix[($i + 1) % $length];
+
+function cesar($txt){
+  for ($i=0; $i < strlen_copycat($txt) ; $i++) { 
+    echo $txt[($i+2)%strlen_copycat($txt)];
+  }
+}
+
+function plateforme($txt){
+  $ponc = [' ', '.', ',', ';', '\''];
+  for ($i=0; isset($txt[$i]) ; $i++) { 
+    for ($p=0; isset($ponc[$p]) ; $p++) { 
+      if ($txt[$i] == "m" && $txt[$i+1] == "e" && $txt[$i+2] == $ponc[$p]) {
+          $txt[$i+2] = "_";
+      }
+    }
+    
+  }
+  return $txt;
+}
+
+
+echo gras($txt)."</br>";
+echo cesar($txt)."<br/>";
+echo plateforme($txt);
 
 ?>
