@@ -29,18 +29,14 @@ function strlen_copycat($input_string) {
       }
       return $i;
   }
-  // $matrix = "Certaines choses changent, et d'autres ne changeront jamais.";
-  // $length = strlen_copycat($matrix);
-
-  // // Remercions la magie du modulo
-  // for ($i = 0; $i < $length; ++$i)
-  //     echo $matrix[($i + 1) % $length];
 
 function cesar($txt){
   for ($i=0; $i < strlen_copycat($txt) ; $i++) { 
     echo $txt[($i+2)%strlen_copycat($txt)];
   }
 }
+
+
 
 function plateforme($txt){
   $ponc = [' ', '.', ',', ';', '\''];
