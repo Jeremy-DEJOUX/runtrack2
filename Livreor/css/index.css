@@ -1,0 +1,267 @@
+/* MISE EN FORME HEADER */
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  background-color: #f3f5f9;
+}
+
+.wrapper {
+  display: flex;
+  position: relative;
+}
+
+.wrapper img {
+  align-items: center;
+  width: 200px;
+  position: relative;
+  bottom: 80px;
+  z-index: -2;
+}
+
+.wrapper .sidebar {
+  width: 200px;
+  height: 100%;
+  background: #393b44;
+  padding: 30px 0px;
+  position: fixed;
+}
+
+.wrapper .sidebar h2 {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  top: 60px;
+}
+
+.wrapper .sidebar ul li {
+  padding: 15px;
+  border-bottom: 1px solid #bdb8d7;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.wrapper .sidebar ul li a {
+  color: white;
+  display: block;
+}
+
+.wrapper .sidebar ul li a .fas {
+  width: 25px;
+}
+
+.wrapper .sidebar ul li:hover {
+  background-color: #8d93ab;
+}
+
+.wrapper .sidebar ul li:hover a {
+  color: black;
+}
+
+.wrapper .sidebar .social_media {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.wrapper .sidebar .social_media a {
+  display: block;
+  width: 40px;
+  background: #8d93ab;
+  height: 40px;
+  line-height: 45px;
+  text-align: center;
+  margin: 0 5px;
+  color: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.wrapper .main_content {
+  width: 100%;
+  margin-left: 200px;
+}
+
+.wrapper .main_content .header {
+  padding: 20px;
+  background: #fff;
+  color: #717171;
+  border-bottom: 1px solid #e0e4e8;
+}
+
+.wrapper .main_content .info {
+  margin: 20px;
+  color: #717171;
+  line-height: 25px;
+}
+
+.wrapper .main_content .info div {
+  margin-bottom: 20px;
+}
+
+@media (max-height: 500px) {
+  .social_media {
+    display: none !important;
+  }
+}
+
+#body_inscription {
+  display: flex;
+}
+
+.form_inscription form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: solid 5px grey;
+  padding: 20px;
+  background-color: whitesmoke;
+}
+
+.form_inscription {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+  background: url("../image/bouback.jfif") no-repeat;
+  background-size: cover;
+}
+
+.form_inscription label {
+  text-align: center;
+}
+
+.form_inscription input {
+  margin-bottom: 15px;
+  height: 25px;
+  text-align: center;
+}
+
+.form_connexion form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: solid 5px grey;
+  padding: 20px;
+  background-color: whitesmoke;
+}
+
+.form_connexion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 90vh;
+  background: url("../image/bouback.jfif") no-repeat;
+  background-size: cover;
+}
+
+.form_connexion label {
+  text-align: center;
+}
+
+.form_connexion input {
+  margin-bottom: 15px;
+  height: 25px;
+  text-align: center;
+}
+
+.form_commentaire {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: auto;
+  margin-top: 150px;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#text-commentaire {
+  margin-bottom: 1vh;
+}
+
+.comment_label {
+  display: flex;
+  width: 60%;
+  margin-bottom: 2.5%;
+  justify-content: center;
+  font-size: 40px;
+  color: #ff414d;
+  background-color: rgba(215, 225, 215, 0.7);
+}
+
+.form_profil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+  background: url("../image/bouback.jfif") no-repeat;
+  background-size: cover;
+}
+.form_profil label {
+  text-align: center;
+}
+
+.form_profil input {
+  margin-bottom: 15px;
+  height: 25px;
+  text-align: center;
+}
+
+.form_profil form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: solid 5px grey;
+  padding: 20px;
+  background-color: whitesmoke;
+}
+
+fieldset {
+  padding: 60px;
+  background: url("../image/bouback.jfif") no-repeat;
+  background-size: cover;
+}
+.php_head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.td_commentaire {
+  border: solid 1px black;
+  padding: 20px;
+}
+
+.td_date {
+  width: 10vw;
+  text-align: center;
+}
+.th_pseudo {
+  text-align: center;
+}
